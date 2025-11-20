@@ -262,6 +262,23 @@ export default {
         success: (res) => {
           this.endLoad = true;
           
+          // 检查 HTTP 状态码，400 表示错误
+          if (res.statusCode && res.statusCode !== 200) {
+            // HTTP 错误状态码
+            const errorMsg = (res.data && res.data.message) || "验证失败，请重试";
+            uni.showToast({
+              title: errorMsg,
+              duration: 2000,
+              icon: "none",
+            });
+            // 重置滑块位置并刷新验证码
+            this.movePv = 0;
+            this.moveX = 0;
+            this.moveCode = 0;
+            this.getCode(); // 刷新验证码图片
+            return;
+          }
+          
           // 检查后端返回的success字段
           if (res.data && res.data.success === false) {
             // 后端返回错误，显示错误信息
