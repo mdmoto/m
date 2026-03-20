@@ -1,1 +1,0 @@
-import{a9 as t,aa as r}from"./index-2add427e.js";async function a(a){return t({url:`/other/article/get/${a}`,method:r.GET})}async function e(a){return t({url:`/other/article/type/${a}`,method:r.GET})}export{a,e as g};
