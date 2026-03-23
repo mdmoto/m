@@ -1,1 +1,0 @@
-import{at as t,au as r}from"./index-d209998c.js";async function e(e){return t({url:`/other/article/get/${e}`,method:r.GET})}async function a(e){return t({url:`/other/article/type/${e}`,method:r.GET})}export{e as a,a as g};
