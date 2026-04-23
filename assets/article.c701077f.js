@@ -1,0 +1,1 @@
+import{at as a,a$ as t,au as e}from"./index-fc7dd88c.js";async function o(o){return a({baseURL:t.common,url:`/other/article/get/${o}`,method:e.GET})}async function r(o,r){return a({baseURL:r||t.common,url:`/other/article/type/${o}`,method:e.GET})}export{o as a,r as g};
